@@ -1,9 +1,12 @@
+
 import 'package:flutter/material.dart';
+
 import 'package:gap/gap.dart';
 
-import 'albarta_font.dart';
 
-class SigningButtom extends StatelessWidget {
+
+
+class LoginProfile extends StatelessWidget {
   final String buttonText;
   final Color buttonColor;
   final double buttonHeight;
@@ -13,7 +16,7 @@ class SigningButtom extends StatelessWidget {
   final Icon buttonIcon;
   final VoidCallback onPressed;
 
-  const SigningButtom({
+  const LoginProfile({
     Key? key,
     required this.buttonText,
     required this.buttonColor,
@@ -36,6 +39,14 @@ class SigningButtom extends StatelessWidget {
         decoration: BoxDecoration(
           color: buttonColor,
           borderRadius: BorderRadius.circular(22),
+          boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 4,
+                  blurRadius: 10,
+                  offset: const Offset(0, 3),
+                )
+              ]
         ),
         child: Padding(
           padding: const EdgeInsets.all(2.0),
@@ -44,15 +55,15 @@ class SigningButtom extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16),
                 child: Text(
+                  
                   buttonText,
-                  style: textThemeAllerta.subtitle2?.copyWith(
-                    shadows: [
-                      const Shadow(
-                        color: Colors.black,
-                        offset: Offset(2.0, 2.0),
-                        blurRadius: 3.0,
-                      ),
-                    ],
+                  style: const TextStyle(
+                   
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontFamily: 'Jost',
+                    fontWeight: FontWeight.w600,
+                    
                   ),
                 ),
               ),
@@ -62,9 +73,11 @@ class SigningButtom extends StatelessWidget {
                 child: Container(
                   height: buttonCircleRedious,
                   width: buttonCircleRedious,
+                  
                   decoration: BoxDecoration(
                     color: buttonCircleColor,
                     shape: BoxShape.circle,
+                    
                   ),
                   child: Center(
                     child: Padding(

@@ -1,4 +1,6 @@
 
+
+
 import 'bottom navigation bar/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       home: MyButtomNavBar(title: ''),
+    
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Customclippath extends CustomClipper<Path> {
+  Customclippath(Color white);
+
   @override
   Path getClip(Size size) {
     Path path = Path();
