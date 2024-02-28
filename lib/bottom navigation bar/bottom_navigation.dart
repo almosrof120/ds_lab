@@ -20,10 +20,12 @@ class _MyButtomNavBarState extends State<MyButtomNavBar> {
     MenuPage(),
     ClubPage(),
     ProfilePage(),
+   
   ];
 
   @override
   Widget build(BuildContext context) {
+     
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(50),

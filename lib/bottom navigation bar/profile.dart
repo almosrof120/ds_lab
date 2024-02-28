@@ -11,173 +11,196 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-          child: Column(
-        children: [
-          Stack(
-            children: [
-              ClipPath(
-                clipper: Customclippath(
-                  Colors.white,
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                  color: const Color.fromARGB(255, 32, 72, 149),
-                ),
-              ),
-              const SizedBox(
-                height: 100,
-              ),
-              Positioned(
-                left: 60,
-                top: 280,
-                child: Column(children: [
-                  Text(
-                    "Let’s you in",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      shadows: [
-                        Shadow(
-                          color: Colors.black.withOpacity(0.7),
-                          offset: const Offset(0, 5),
-                          blurRadius: 10,
-                        ),
-                      ],
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 28,
-                      fontFamily: 'Jost',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
+      body: ClipPath(
+        clipper: Customclippath(
+          Colors.black,
+        ),
+        child: SizedBox(
+          height: deviceHeight,
+          width: deviceWidth,
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            color: const Color.fromARGB(255, 32, 72, 149),
+            child: SizedBox(
+              height: 150,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 50, top: 220),
                   ),
-                ]),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Positioned(
-                left: 50,
-                top: 350,
-                child: SvgPicture.asset(
-                  'assets/google.svg',
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              Positioned(
-                left: 120,
-                top: 365,
-                child: GestureDetector(
-                    onTap: () {
-                      FirebaseService.signInwithGoogle(context);
-                    },
-                    child: const Text(
-                      'Continue with Google',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 18,
-                        fontFamily: 'Mulish',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 50
+                  
+                          
+                        ),
                       ),
-                    )),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Positioned(
-                left: 50,
-                top: 410,
-                child: Row(
-                  children: [
-                    Positioned(
-                      // left: 120,
-                      // top: 360,
-                      child: SvgPicture.asset(
+                      Text("Let’s you in",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            shadows: [
+                              Shadow(
+                                color: Colors.black.withOpacity(0.7),
+                                offset: const Offset(0, 5),
+                                blurRadius: 10,
+                              ),
+                            ],
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 28,
+                            fontFamily: 'Jost',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          )),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 50, ),
+                      ),
+                      SvgPicture.asset(
+                        'assets/google.svg',
+                        height: 70,
+                        width: 70,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          FirebaseService.signInwithGoogle(
+                              context); // Handle Google sign-in here
+                        },
+                        child: const Text(
+                          'Continue with Google',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 18,
+                            fontFamily: 'Mulish',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(
+                          left: 50,
+                        ),
+                      ),
+                      SvgPicture.asset(
                         'assets/apple.svg',
                         height: 70,
                         width: 70,
                       ),
-                    ),
-                    GestureDetector(
-
-                        //onTap: _handleGoogleSignIn,
+                      GestureDetector(
+                        onTap: () {
+                          //  FirebaseService.signInwithGoogle(context);     // Handle Apple sign-in here
+                        },
                         child: const Text(
-                      'Continue with Apple',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 18,
-                        fontFamily: 'Mulish',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
+                          'Continue with Apple',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 18,
+                            fontFamily: 'Mulish',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
+                        ),
                       ),
-                    )),
-                  ],
-                ),
-              ),
-              const Positioned(
-                  left: 180,
-                  top: 480,
-                  child: Text(
-                    '(Or)',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 19,
-                      fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  )),
-              const SizedBox(
-                height: 20,
-              ),
-              Positioned(
-                left: 30,
-                top: 530,
-                child: Center(
-                  child: LoginProfile(
-                      buttonText: 'Sign In with Your Account',
-                      buttonColor: const Color.fromRGBO(9, 129, 107, 1),
-                      buttonHeight: 54,
-                      buttonWidth: 328,
-                      buttonCircleColor: Colors.white,
-                      buttonCircleRedious: 43,
-                      buttonIcon: const Icon(Icons.arrow_forward),
-                      onPressed: (() {
-                        Navigator.push(
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                     // crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(
+                           
+                          ),
+                          child: Text(
+                            '(Or)',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 19,
+                              fontFamily: 'Mulish',
+                              fontWeight: FontWeight.w600,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ]),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(),
+                      ),
+                      LoginProfile(
+                        buttonText: 'Sign In with Your Account',
+                        buttonColor: const Color.fromRGBO(9, 129, 107, 1),
+                        buttonHeight: 54,
+                        buttonWidth: 328,
+                        buttonCircleColor: Colors.white,
+                        buttonCircleRedious: 43,
+                        buttonIcon: const Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const SigininPage()));
-                      })),
-                ),
-              ),
-              const Positioned(
-                left: 85,
-                top: 593,
-                child: Center(
-                  child: Text(
-                    'Don’t have an Account? ',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color.fromARGB(176, 170, 170, 100),
-                      fontSize: 14,
-                      fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
+                              builder: (context) => const SigininPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
                   ),
-                ),
-              ),
-              Positioned(
-                left: 245,
-                top: 579,
-                child: TextButton(
+                  const SizedBox(
+                    height: 7,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                       const Padding(
+                        padding: EdgeInsets.only()),
+                      const Text(
+                        'Don’t have an Account? ',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromARGB(176, 170, 170, 100),
+                          fontSize: 14,
+                          fontFamily: 'Mulish',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
+                      ),
+                      TextButton(
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -195,12 +218,92 @@ class ProfilePage extends StatelessWidget {
                       height: 0,
                     ),
                   ),
-                ),
-              )
-            ],
+                      )
+                    ],
+                    
+                  ),
+                  
+                ],
+                
+              ),
+              
+            ),
           ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }
+    
+
+
+    //           const SizedBox(
+    //             height: 20,
+    //           ),
+    //           Positioned(
+    //             left: 30,
+    //             top: 530,
+    //             child: Center(
+    //               child: LoginProfile(
+    //                   buttonText: 'Sign In with Your Account',
+    //                   buttonColor: const Color.fromRGBO(9, 129, 107, 1),
+    //                   buttonHeight: 54,
+    //                   buttonWidth: 328,
+    //                   buttonCircleColor: Colors.white,
+    //                   buttonCircleRedious: 43,
+    //                   buttonIcon: const Icon(Icons.arrow_forward),
+    //                   onPressed: (() {
+    //                     Navigator.push(
+    //                         context,
+    //                         MaterialPageRoute(
+    //                             builder: (context) => const SigininPage()));
+    //                   })),
+    //             ),
+    //           ),
+    //           const Positioned(
+    //             left: 85,
+    //             top: 593,
+    //             child: Center(
+    //               child: Text(
+    //                 'Don’t have an Account? ',
+    //                 textAlign: TextAlign.center,
+    //                 style: TextStyle(
+    //                   color: Color.fromARGB(176, 170, 170, 100),
+    //                   fontSize: 14,
+    //                   fontFamily: 'Mulish',
+    //                   fontWeight: FontWeight.w600,
+    //                   height: 0,
+    //                 ),
+    //               ),
+    //             ),
+    //           ),
+    //           Positioned(
+    //             left: 245,
+    //             top: 579,
+    //             child: TextButton(
+    //               onPressed: () {
+    //                 Navigator.push(
+    //                     context,
+    //                     MaterialPageRoute(
+    //                         builder: (context) => const SiginupPage()));
+    //               },
+    //               child: const Text(
+    //                 'SIGN UP',
+    //                 textAlign: TextAlign.center,
+    //                 style: TextStyle(
+    //                   color: Colors.white,
+    //                   fontSize: 14,
+    //                   fontFamily: 'Mulish',
+    //                   fontWeight: FontWeight.w600,
+    //                   height: 0,
+    //                 ),
+    //               ),
+    //             ),
+    //           )
+    //         ],
+    //       ),
+    //     ],
+    //   )),
+    // );
+  
+

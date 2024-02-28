@@ -38,7 +38,7 @@ class LoginProfile extends StatelessWidget {
         width: buttonWidth,
         decoration: BoxDecoration(
           color: buttonColor,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(30),
           boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),

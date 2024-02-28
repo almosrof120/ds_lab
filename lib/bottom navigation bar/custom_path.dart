@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class Customclippath extends CustomClipper<Path> {
   Customclippath(Color white);
 
   @override
   Path getClip(Size size) {
+    double w = size.width;
+    double h = size.height;
     Path path = Path();
     path.moveTo(size.width * 0.0005000, size.height * 0.1994286);
     path.lineTo(size.width * -0.0048333, size.height * 1.0014286);
