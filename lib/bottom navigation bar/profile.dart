@@ -1,30 +1,13 @@
+import 'package:ds_lab/Firebase/continue_with.dart';
 import 'package:ds_lab/profile/custom_button.dart';
 import 'package:ds_lab/sign%20in%20page/sigining_page.dart';
 import 'package:ds_lab/sign%20in%20page/siginup_page.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'custom_path.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
-
-  Future<void> _handleGoogleSignIn() async {
-    try {
-      final GoogleSignInAccount? googleSignInAccount =
-          await GoogleSignIn().signIn();
-
-      if (googleSignInAccount != null) {
-        // Google Sign In was successful, you can now use the account details.
-        print('User signed in: ${googleSignInAccount.displayName}');
-      } else {
-        // Google Sign In was canceled by the user.
-        print('User canceled the Google Sign In');
-      }
-    } catch (error) {
-      print('Error during Google Sign In: $error');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +71,9 @@ class ProfilePage extends StatelessWidget {
                 left: 120,
                 top: 365,
                 child: GestureDetector(
-                    onTap: _handleGoogleSignIn,
+                    onTap: () {
+                      FirebaseService.signInwithGoogle(context);
+                    },
                     child: const Text(
                       'Continue with Google',
                       textAlign: TextAlign.center,

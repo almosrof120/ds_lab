@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413267082144",
+    "project_id": "dslab-9f1b4",
+    "storage_bucket": "dslab-9f1b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413267082144:android:9d2ee19531f5151ac002c5",
+        "android_client_info": {
+          "package_name": "com.example.ds_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413267082144-1ubjcmhq2ahcslubugqm20c8p4ob302l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ds_lab",
+            "certificate_hash": "107ec6e49feb22ed33c51685c7d3152808efd673"
+          }
+        },
+        {
+          "client_id": "413267082144-2la9ee8au14ltpfplcfh1pmu4en39s0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfyu_g2JW8Kw_-yyvKi1K05qLMAMGuOkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413267082144-2la9ee8au14ltpfplcfh1pmu4en39s0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
