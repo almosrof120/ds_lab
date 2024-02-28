@@ -35,13 +35,10 @@ class ProfilePage extends StatelessWidget {
                     padding: EdgeInsets.only(left: 50, top: 220),
                   ),
                   Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50
-                  
-                          
-                        ),
+                        padding: EdgeInsets.only(left: 50),
                       ),
                       Text("Let’s you in",
                           textAlign: TextAlign.center,
@@ -69,28 +66,34 @@ class ProfilePage extends StatelessWidget {
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50, ),
+                        padding: EdgeInsets.only(
+                          left: 50,
+                        ),
                       ),
                       SvgPicture.asset(
                         'assets/google.svg',
                         height: 70,
                         width: 70,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          FirebaseService.signInwithGoogle(
-                              context); // Handle Google sign-in here
-                        },
-                        child: const Text(
-                          'Continue with Google',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 18,
-                            fontFamily: 'Mulish',
-                            fontWeight: FontWeight.w600,
-                            height: 0,
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              FirebaseService.signInwithGoogle(
+                                  context); // Handle Google sign-in here
+                            },
+                            child: const Text(
+                              'Continue with Google',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontSize: 18,
+                                fontFamily: 'Mulish',
+                                fontWeight: FontWeight.w600,
+                                height: 0,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
@@ -111,20 +114,24 @@ class ProfilePage extends StatelessWidget {
                         height: 70,
                         width: 70,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          //  FirebaseService.signInwithGoogle(context);     // Handle Apple sign-in here
-                        },
-                        child: const Text(
-                          'Continue with Apple',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 18,
-                            fontFamily: 'Mulish',
-                            fontWeight: FontWeight.w600,
-                            height: 0,
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              //  FirebaseService.signInwithGoogle(context);     // Handle Apple sign-in here
+                            },
+                            child: const Text(
+                              'Continue with Apple',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontSize: 18,
+                                fontFamily: 'Mulish',
+                                fontWeight: FontWeight.w600,
+                                height: 0,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
@@ -132,13 +139,11 @@ class ProfilePage extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
-                     // crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(
-                           
-                          ),
+                          padding: EdgeInsets.only(),
                           child: Text(
                             '(Or)',
                             textAlign: TextAlign.center,
@@ -186,9 +191,8 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
-                       const Padding(
-                        padding: EdgeInsets.only()),
+                    children: [
+                      const Padding(padding: EdgeInsets.only()),
                       const Text(
                         'Don’t have an Account? ',
                         textAlign: TextAlign.center,
@@ -201,32 +205,28 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SiginupPage()));
-                  },
-                  child: const Text(
-                    'SIGN UP',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SiginupPage()));
+                        },
+                        child: const Text(
+                          'SIGN UP',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontFamily: 'Mulish',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
+                        ),
                       )
                     ],
-                    
                   ),
-                  
                 ],
-                
               ),
-              
             ),
           ),
         ),
@@ -235,75 +235,3 @@ class ProfilePage extends StatelessWidget {
   }
 }
     
-
-
-    //           const SizedBox(
-    //             height: 20,
-    //           ),
-    //           Positioned(
-    //             left: 30,
-    //             top: 530,
-    //             child: Center(
-    //               child: LoginProfile(
-    //                   buttonText: 'Sign In with Your Account',
-    //                   buttonColor: const Color.fromRGBO(9, 129, 107, 1),
-    //                   buttonHeight: 54,
-    //                   buttonWidth: 328,
-    //                   buttonCircleColor: Colors.white,
-    //                   buttonCircleRedious: 43,
-    //                   buttonIcon: const Icon(Icons.arrow_forward),
-    //                   onPressed: (() {
-    //                     Navigator.push(
-    //                         context,
-    //                         MaterialPageRoute(
-    //                             builder: (context) => const SigininPage()));
-    //                   })),
-    //             ),
-    //           ),
-    //           const Positioned(
-    //             left: 85,
-    //             top: 593,
-    //             child: Center(
-    //               child: Text(
-    //                 'Don’t have an Account? ',
-    //                 textAlign: TextAlign.center,
-    //                 style: TextStyle(
-    //                   color: Color.fromARGB(176, 170, 170, 100),
-    //                   fontSize: 14,
-    //                   fontFamily: 'Mulish',
-    //                   fontWeight: FontWeight.w600,
-    //                   height: 0,
-    //                 ),
-    //               ),
-    //             ),
-    //           ),
-    //           Positioned(
-    //             left: 245,
-    //             top: 579,
-    //             child: TextButton(
-    //               onPressed: () {
-    //                 Navigator.push(
-    //                     context,
-    //                     MaterialPageRoute(
-    //                         builder: (context) => const SiginupPage()));
-    //               },
-    //               child: const Text(
-    //                 'SIGN UP',
-    //                 textAlign: TextAlign.center,
-    //                 style: TextStyle(
-    //                   color: Colors.white,
-    //                   fontSize: 14,
-    //                   fontFamily: 'Mulish',
-    //                   fontWeight: FontWeight.w600,
-    //                   height: 0,
-    //                 ),
-    //               ),
-    //             ),
-    //           )
-    //         ],
-    //       ),
-    //     ],
-    //   )),
-    // );
-  
-
