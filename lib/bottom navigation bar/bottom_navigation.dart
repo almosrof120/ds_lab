@@ -1,3 +1,5 @@
+import 'package:ds_lab/sign%20in%20page/sigining_page.dart';
+import 'package:ds_lab/sign%20in%20page/siginup_page.dart';
 import 'package:flutter/material.dart';
 import 'club.dart';
 import 'event.dart';
@@ -20,6 +22,8 @@ class _MyButtomNavBarState extends State<MyButtomNavBar> {
     MenuPage(),
     ClubPage(),
     ProfilePage(),
+    SiginUp(),
+    SigininPage(),
    
   ];
 

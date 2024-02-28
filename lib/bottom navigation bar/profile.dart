@@ -1,10 +1,10 @@
 import 'package:ds_lab/Firebase/continue_with.dart';
 import 'package:ds_lab/profile/custom_button.dart';
 import 'package:ds_lab/sign%20in%20page/sigining_page.dart';
-import 'package:ds_lab/sign%20in%20page/siginup_page.dart';
 import 'package:flutter_svg/svg.dart';
 import 'custom_path.dart';
 import 'package:flutter/material.dart';
+import 'package:ds_lab/sign in page/siginup_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -35,10 +35,13 @@ class ProfilePage extends StatelessWidget {
                     padding: EdgeInsets.only(left: 50, top: 220),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50),
+                        padding: EdgeInsets.only(left: 50
+                  
+                          
+                        ),
                       ),
                       Text("Let’s you in",
                           textAlign: TextAlign.center,
@@ -66,9 +69,7 @@ class ProfilePage extends StatelessWidget {
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(
-                          left: 50,
-                        ),
+                        padding: EdgeInsets.only(left: 50, ),
                       ),
                       SvgPicture.asset(
                         'assets/google.svg',
@@ -139,11 +140,13 @@ class ProfilePage extends StatelessWidget {
                     height: 10,
                   ),
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      // crossAxisAlignment: CrossAxisAlignment.start,
+                       mainAxisAlignment: MainAxisAlignment.center,
+                     // crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(),
+                          padding: EdgeInsets.only(
+                           
+                          ),
                           child: Text(
                             '(Or)',
                             textAlign: TextAlign.center,
@@ -191,8 +194,9 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Padding(padding: EdgeInsets.only()),
+                    children:  [
+                       const Padding(
+                        padding: EdgeInsets.only()),
                       const Text(
                         'Don’t have an Account? ',
                         textAlign: TextAlign.center,
@@ -205,28 +209,32 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SiginupPage()));
-                        },
-                        child: const Text(
-                          'SIGN UP',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontFamily: 'Mulish',
-                            fontWeight: FontWeight.w600,
-                            height: 0,
-                          ),
-                        ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SiginUp()));
+                  },
+                  child: const Text(
+                    'SIGN UP',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontFamily: 'Mulish',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                    ),
+                  ),
                       )
                     ],
+                    
                   ),
+                  
                 ],
+                
               ),
+              
             ),
           ),
         ),
@@ -235,3 +243,4 @@ class ProfilePage extends StatelessWidget {
   }
 }
     
+
