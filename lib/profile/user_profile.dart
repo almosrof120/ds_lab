@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class UserProfile extends StatelessWidget {
    UserProfile({super.key});
   User? user = FirebaseAuth.instance.currentUser;
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class UserProfile extends StatelessWidget {
             Text(user!.displayName!),
             CircleAvatar(
               backgroundImage: NetworkImage(user!.photoURL!),
-              radius: 20,
+              radius: 40,
             )
           ],
         ))
