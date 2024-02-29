@@ -1,5 +1,3 @@
-
-
 import 'package:firebase_core/firebase_core.dart';
 
 import 'bottom navigation bar/bottom_navigation.dart';
@@ -17,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       home: MyButtomNavBar(title: ''),
     );

@@ -17,7 +17,7 @@ class FirebaseService {
           await googleSignInAccount!.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleSignInAuthentication.accessToken,
-        idToken: googleSignInAuthentication.idToken,
+        idToken: googleSignInAuthentication.idToken!,
       );
       await _auth.signInWithCredential(credential);
       Navigator.push( context, MaterialPageRoute(builder: (context) => UserProfile()));

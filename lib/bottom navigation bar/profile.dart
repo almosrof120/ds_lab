@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'custom_path.dart';
 import 'package:flutter/material.dart';
 import 'package:ds_lab/sign in page/siginup_page.dart';
+import 'package:gap/gap.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -61,8 +62,8 @@ class ProfilePage extends StatelessWidget {
                           )),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
+                  const Gap(
+                   20
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -174,7 +175,7 @@ class ProfilePage extends StatelessWidget {
                         buttonText: 'Sign In with Your Account',
                         buttonColor: const Color.fromRGBO(9, 129, 107, 1),
                         buttonHeight: 54,
-                        buttonWidth: 328,
+                        buttonWidth: 320,
                         buttonCircleColor: Colors.white,
                         buttonCircleRedious: 43,
                         buttonIcon: const Icon(Icons.arrow_forward),

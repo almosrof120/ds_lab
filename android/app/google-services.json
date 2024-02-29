@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "413267082144",
-    "project_id": "dslab-9f1b4",
-    "storage_bucket": "dslab-9f1b4.appspot.com"
+    "project_number": "142339791250",
+    "project_id": "dslab-f23b7",
+    "storage_bucket": "dslab-f23b7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:413267082144:android:9d2ee19531f5151ac002c5",
+        "mobilesdk_app_id": "1:142339791250:android:5fd611aace7c5d1c14894b",
         "android_client_info": {
-          "package_name": "com.example.ds_lab"
+          "package_name": "com.example.dslab"
         }
       },
       "oauth_client": [
         {
-          "client_id": "413267082144-1ubjcmhq2ahcslubugqm20c8p4ob302l.apps.googleusercontent.com",
+          "client_id": "142339791250-6k4gkod2a85psa5d781l0pt2pdm6fm8e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.ds_lab",
+            "package_name": "com.example.dslab",
             "certificate_hash": "107ec6e49feb22ed33c51685c7d3152808efd673"
           }
         },
         {
-          "client_id": "413267082144-2la9ee8au14ltpfplcfh1pmu4en39s0p.apps.googleusercontent.com",
+          "client_id": "142339791250-p09qtjqu8u0lvnj84l08mo4ve4pu5a08.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBfyu_g2JW8Kw_-yyvKi1K05qLMAMGuOkw"
+          "current_key": "AIzaSyBSfnrddl5TVyFA7lfgyQ0rZ0nNRkO6Frc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "413267082144-2la9ee8au14ltpfplcfh1pmu4en39s0p.apps.googleusercontent.com",
+              "client_id": "142339791250-p09qtjqu8u0lvnj84l08mo4ve4pu5a08.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
