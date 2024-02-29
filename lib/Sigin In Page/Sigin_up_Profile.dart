@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-
 import '../Custom Design/Custom_Buttom.dart';
 import '../Custom Design/Custom_path_profile_page.dart';
 import 'Sigin_in_Profile.dart';
@@ -10,7 +9,7 @@ class SiginUp extends StatelessWidget {
   const SiginUp({Key? key}) : super(key: key);
 
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -50,29 +49,14 @@ Widget build(BuildContext context) {
           ),
         ],
       ),
-
-
-
-
-
-
-
-
-
-
-
-
-
       backgroundColor: Colors.white,
       body: ClipPath(
-        clipper: Customclippath(
-          Colors.black,
-        ),
+        clipper: Customclippath(),
         child: SizedBox(
           height: deviceHeight,
           width: deviceWidth,
           child: Container(
-            height:deviceHeight ,
+            height: deviceHeight,
             width: deviceWidth,
             color: const Color.fromARGB(255, 32, 72, 149),
             child: SizedBox(
@@ -81,16 +65,13 @@ Widget build(BuildContext context) {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only( top: 250),
+                    padding: EdgeInsets.only(top: 250),
                   ),
                   Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 60
-                  
-                          
-                        ),
+                        padding: EdgeInsets.only(left: 60),
                       ),
                       Text("Getting Started",
                           textAlign: TextAlign.center,
@@ -110,15 +91,13 @@ Widget build(BuildContext context) {
                           )),
                     ],
                   ),
-                  const Gap(
-                   20
-                  ),
+                  const Gap(20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only( left: 50),
+                        padding: EdgeInsets.only(left: 50),
                       ),
                       SvgPicture.asset(
                         'assets/google.svg',
@@ -148,16 +127,14 @@ Widget build(BuildContext context) {
                     ],
                   ),
                   const Gap(
-                   15,
+                    15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50
-                          
-                        ),
+                        padding: EdgeInsets.only(left: 50),
                       ),
                       SvgPicture.asset(
                         'assets/apple.svg',
@@ -189,13 +166,11 @@ Widget build(BuildContext context) {
                     10,
                   ),
                   Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
-                     // crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(
-                           
-                          ),
+                          padding: EdgeInsets.only(),
                           child: Text(
                             '(Or)',
                             textAlign: TextAlign.center,
@@ -210,7 +185,7 @@ Widget build(BuildContext context) {
                         ),
                       ]),
                   const Gap(
-                     20,
+                    20,
                   ),
                   Row(
                     // crossAxisAlignment: CrossAxisAlignment.start,
@@ -239,13 +214,12 @@ Widget build(BuildContext context) {
                     ],
                   ),
                   const Gap(
-                     7,
+                    7,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
-                       const Padding(
-                        padding: EdgeInsets.only()),
+                    children: [
+                      const Padding(padding: EdgeInsets.only()),
                       const Text(
                         'Don’t have an Account? ',
                         textAlign: TextAlign.center,
@@ -258,36 +232,32 @@ Widget build(BuildContext context) {
                         ),
                       ),
                       TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SiginUp()));
-                  },
-                  child: const Text(
-                    'SIGN UP',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontFamily: 'Mulish',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
-                    ),
-                  ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SiginUp()));
+                        },
+                        child: const Text(
+                          'SIGN UP',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontFamily: 'Mulish',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                          ),
+                        ),
                       )
                     ],
-                    
                   ),
-                  
                 ],
-                
               ),
-              
             ),
           ),
         ),
       ),
     );
   }
-} 
+}

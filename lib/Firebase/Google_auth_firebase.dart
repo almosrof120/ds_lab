@@ -1,5 +1,3 @@
-
-
 import 'package:ds_lab/Google%20Authrntication/Google_user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +18,8 @@ class FirebaseService {
         idToken: googleSignInAuthentication.idToken!,
       );
       await _auth.signInWithCredential(credential);
-      Navigator.push( context, MaterialPageRoute(builder: (context) => UserProfile()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => UserProfile()));
     } on FirebaseAuthException catch (e) {
       print(e.message);
       throw e;

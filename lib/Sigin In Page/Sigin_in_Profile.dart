@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Custom Design/Custom_path_profile_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SigininPage extends StatelessWidget {
   const SigininPage({Key? key}) : super(key: key);
@@ -10,24 +11,29 @@ class SigininPage extends StatelessWidget {
     final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-          appBar: AppBar(elevation: 0,
-            backgroundColor: Colors.white,
+            appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
         actions: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+              padding: const EdgeInsets.only(left: 10, right: 10, top: 4),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
                     "assets/ds.png",
-                    scale: 6,
+                    scale: 5,
+                    height: 100,
+                    width: 100,
                   ),
                   Row(
                     children: [
                       Image.asset(
                         "assets/diu.png",
                         scale: 5,
+                        height: 100,
+                        width: 100,
                       ),
                       Image.asset(
                         "assets/notification.gif",
@@ -42,11 +48,10 @@ class SigininPage extends StatelessWidget {
         ],
       ),
 
-
       backgroundColor: Colors.white,
       body: ClipPath(
         clipper: Customclippath(
-          Colors.black,
+         
         ),
         child: SizedBox(
           height: deviceHeight,
