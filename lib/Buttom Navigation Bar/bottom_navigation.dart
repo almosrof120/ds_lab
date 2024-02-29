@@ -1,5 +1,5 @@
-import 'package:ds_lab/sign%20in%20page/sigining_page.dart';
-import 'package:ds_lab/sign%20in%20page/siginup_page.dart';
+import 'package:ds_lab/Sigin%20In%20Page/Sigin_in_Profile.dart';
+import 'package:ds_lab/Sigin%20In%20Page/Sigin_up_Profile.dart';
 import 'package:flutter/material.dart';
 import 'club.dart';
 import 'event.dart';
@@ -24,41 +24,47 @@ class _MyButtomNavBarState extends State<MyButtomNavBar> {
     ProfilePage(),
     SiginUp(),
     SigininPage(),
-   
   ];
 
   @override
   Widget build(BuildContext context) {
-     
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
-          child: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.white,
-            actions: [
-              Image.asset(
-                "assets/ds.png",
-                height: 100,
-                width: 100,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        actions: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10, top: 4),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    "assets/ds.png",
+                    scale: 5,
+                    height: 100,
+                    width: 100,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset(
+                        "assets/diu.png",
+                        scale: 5,
+                        height: 100,
+                        width: 100,
+                      ),
+                      Image.asset(
+                        "assets/notification.gif",
+                        scale: 2,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 3,
-              ),
-              Image.asset(
-                "assets/diu.png",
-                height: 100,
-                width: 100,
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset(
-                  "assets/notification.gif",
-                  scale: 2,
-                ),
-              )
-            ],
-          )),
+            ),
+          ),
+        ],
+      ),
       body: pages[selectedTab],
       bottomNavigationBar: BottomNavigationBar(
           elevation: 0,

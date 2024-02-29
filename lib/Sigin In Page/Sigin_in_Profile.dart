@@ -1,45 +1,46 @@
-
 import 'package:flutter/material.dart';
 
-import '../bottom navigation bar/custom_path.dart';
+import '../Custom Design/Custom_path_profile_page.dart';
 
-class SiginUp extends StatelessWidget {
-  const SiginUp({Key? key}) : super(key: key);
+class SigininPage extends StatelessWidget {
+  const SigininPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
     final deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
-          child: AppBar(
-            elevation: 0,
+          appBar: AppBar(elevation: 0,
             backgroundColor: Colors.white,
-            actions: [
-              Image.asset(
-                "assets/ds.png",
-                height: 100,
-                width: 100,
+        actions: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    "assets/ds.png",
+                    scale: 6,
+                  ),
+                  Row(
+                    children: [
+                      Image.asset(
+                        "assets/diu.png",
+                        scale: 5,
+                      ),
+                      Image.asset(
+                        "assets/notification.gif",
+                        scale: 2,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 3,
-              ),
-              Image.asset(
-                "assets/diu.png",
-                height: 100,
-                width: 100,
-              ),
-              InkWell(
-                onTap: () {},
-                child: Image.asset(
-                  "assets/notification.gif",
-                  scale: 2,
-                ),
-              )
-            ],
-          )),
-   
+            ),
+          ),
+        ],
+      ),
 
 
       backgroundColor: Colors.white,
@@ -259,7 +260,9 @@ class SiginUp extends StatelessWidget {
           ),
         ),
       ),
+    
     );
+    
   }
 }
     

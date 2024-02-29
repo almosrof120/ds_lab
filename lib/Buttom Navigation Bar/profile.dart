@@ -1,10 +1,10 @@
-import 'package:ds_lab/Firebase/continue_with.dart';
-import 'package:ds_lab/profile/custom_button.dart';
-import 'package:ds_lab/sign%20in%20page/sigining_page.dart';
+import 'package:ds_lab/Firebase/Google_auth_firebase.dart';
+import 'package:ds_lab/Custom%20Design/Custom_Buttom.dart';
+import 'package:ds_lab/Sigin%20In%20Page/Sigin_in_Profile.dart';
 import 'package:flutter_svg/svg.dart';
-import 'custom_path.dart';
+import '../Custom Design/Custom_path_profile_page.dart';
 import 'package:flutter/material.dart';
-import 'package:ds_lab/sign in page/siginup_page.dart';
+import 'package:ds_lab/Sigin%20In%20Page/Sigin_up_Profile.dart';
 import 'package:gap/gap.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -24,22 +24,22 @@ class ProfilePage extends StatelessWidget {
           height: deviceHeight,
           width: deviceWidth,
           child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
+            height:deviceHeight ,
+            width: deviceWidth,
             color: const Color.fromARGB(255, 32, 72, 149),
             child: SizedBox(
-              height: 150,
+              height: 280,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(left: 50, top: 220),
+                    padding: EdgeInsets.only( top: 250),
                   ),
                   Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50
+                        padding: EdgeInsets.only(left: 60
                   
                           
                         ),
@@ -67,10 +67,10 @@ class ProfilePage extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(left: 50, ),
+                        padding: EdgeInsets.only( left: 50),
                       ),
                       SvgPicture.asset(
                         'assets/google.svg',
@@ -99,16 +99,16 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 15,
+                  const Gap(
+                   15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
-                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(
-                          left: 50,
+                        padding: EdgeInsets.only(left: 50
+                          
                         ),
                       ),
                       SvgPicture.asset(
@@ -137,8 +137,8 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  const Gap(
+                    10,
                   ),
                   Row(
                        mainAxisAlignment: MainAxisAlignment.center,
@@ -161,8 +161,8 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ]),
-                  const SizedBox(
-                    height: 20,
+                  const Gap(
+                     20,
                   ),
                   Row(
                     // crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,8 +190,8 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 7,
+                  const Gap(
+                     7,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
