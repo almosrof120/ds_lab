@@ -101,9 +101,9 @@ class _SigininPageState extends State<SigininPage> {
               child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 35),
+                    padding: EdgeInsets.only(top: 20),
                   ),
-                  Column(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Padding(
@@ -111,7 +111,7 @@ class _SigininPageState extends State<SigininPage> {
                           left: 40,
                         ),
                       ),
-                      Text("Let’s you in",
+                      Text("Let’s Sign in",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             shadows: [
@@ -130,7 +130,7 @@ class _SigininPageState extends State<SigininPage> {
                       
                     ],
                   ),
-                  const Gap(40),
+                  const Gap(35),
                   Padding(
                       padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                       child: Form(
@@ -192,7 +192,27 @@ class _SigininPageState extends State<SigininPage> {
                               obscureText: true,
                             ),
                           ),
-                          const Gap(50),
+                          const Gap(
+                            10.0,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ForgotPassword()));
+                            },
+                            child: const Text("Forgot Password?",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontFamily: 'Mulish',
+                                    color: Color(0xFF8c8e98),
+                                    fontSize: 14.0,
+                                    height: 0,
+                                    fontWeight: FontWeight.w500)),
+                          ),
+                          const Gap(30),
                           GestureDetector(
                             onTap: () {
                               if (_formkey.currentState!.validate()) {
@@ -241,19 +261,7 @@ class _SigininPageState extends State<SigininPage> {
                               ),
                             ),
                           ),
-                           const SizedBox(
-              height: 20.0,
-            ),
-            GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
-              },
-              child: const Text("Forgot Password?",
-                  style: TextStyle(
-                      color: Color(0xFF8c8e98),
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w500)),
-            ),
+                           
 
                           const Gap(
                             12.0,
@@ -294,7 +302,7 @@ class _SigininPageState extends State<SigininPage> {
                                   ),
                                 ),
                               ),
-                              const Gap(20),
+                              const Gap(50),
                               Container(
                                 height: 60,
                                 width: 60,
@@ -310,42 +318,8 @@ class _SigininPageState extends State<SigininPage> {
                               )
                             ],
                           ),
-                          const Gap(
-                            35.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text("Already have an account?",
-                                  style: TextStyle(
-                                      fontFamily: 'Mulish',
-                                      color: Color.fromARGB(255, 0, 0, 0),
-                                      fontSize: 17.0,
-                                      height: 0,
-                                      fontWeight: FontWeight.w500)),
-                              const Gap(
-                                5.0,
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const SigininPage()));
-                                },
-                                child: const Text(
-                                  "SIGIN IN",
-                                  style: TextStyle(
-                                      fontFamily: 'Mulish',
-                                      color: Color.fromARGB(255, 255, 255, 255),
-                                      fontSize: 17.0,
-                                      height: 0,
-                                      fontWeight: FontWeight.w700),
-                                ),
-                              ),
-                            ],
-                          )
+                          
+                          
                         ]),
                       ))
                 ],

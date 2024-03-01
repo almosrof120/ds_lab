@@ -109,7 +109,7 @@ class _SiginUpState extends State<SiginUp> {
               child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 35),
+                    padding: EdgeInsets.only(top: 25),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,7 +155,7 @@ class _SiginUpState extends State<SiginUp> {
                       )
                     ],
                   ),
-                  const Gap(40),
+                  const Gap(35),
                   Padding(
                       padding: const EdgeInsets.only(left: 40.0, right: 40.0),
                       child: Form(
@@ -217,7 +217,7 @@ class _SiginUpState extends State<SiginUp> {
                               obscureText: true,
                             ),
                           ),
-                          const Gap(50),
+                          const Gap(40),
                           GestureDetector(
                             onTap: () {
                               if (_formkey.currentState!.validate()) {
@@ -267,7 +267,7 @@ class _SiginUpState extends State<SiginUp> {
                             ),
                           ),
                           const Gap(
-                            12.0,
+                            10.0,
                           ),
                           const Text(
                             "Or Continue With",
@@ -279,7 +279,7 @@ class _SiginUpState extends State<SiginUp> {
                                 fontWeight: FontWeight.w500),
                           ),
                           const Gap(
-                            25.0,
+                            20.0,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -305,7 +305,7 @@ class _SiginUpState extends State<SiginUp> {
                                   ),
                                 ),
                               ),
-                              const Gap(20),
+                              const Gap(50),
                               Container(
                                 height: 60,
                                 width: 60,
@@ -322,7 +322,7 @@ class _SiginUpState extends State<SiginUp> {
                             ],
                           ),
                           const Gap(
-                            35.0,
+                            15.0,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
