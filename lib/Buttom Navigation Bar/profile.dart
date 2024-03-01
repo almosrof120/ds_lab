@@ -2,7 +2,6 @@ import 'package:ds_lab/Custom%20Design/Profile_Clip_Call.dart';
 import 'package:ds_lab/Firebase/Google_auth_firebase.dart';
 import 'package:ds_lab/Custom%20Design/Custom_Buttom.dart';
 import 'package:ds_lab/Sigin%20In%20Page/Sigin_in_Profile.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:ds_lab/Sigin%20In%20Page/Sigin_up_Profile.dart';
 import 'package:gap/gap.dart';
@@ -24,7 +23,7 @@ class ProfilePage extends StatelessWidget {
             Column(
               children: [
                 Container(
-                    height: deviceHeight,
+                    height: 443.h,
                     width: deviceWidth,
                     //height:double.infinity,
                     color: const Color.fromARGB(255, 32, 72, 149),
@@ -54,7 +53,7 @@ class ProfilePage extends StatelessWidget {
                                   fontSize: 28,
                                   fontFamily: 'Jost',
                                   fontWeight: FontWeight.w600,
-                                  height: 0,
+                                  height: 0.h,
                                 )),
                           ],
                         ),
@@ -66,11 +65,19 @@ class ProfilePage extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.only(left: 50),
                             ),
-                            SvgPicture.asset(
-                              'assets/google.svg',
-                              height: 70,
-                              width: 70,
+                            Container(
+                              height: 60,
+                              width: 60,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle, color: Colors.white),
+                              child: Center(
+                                  child: Image.asset(
+                                "assets/google.png",
+                                height: 20,
+                                width: 20,
+                              )),
                             ),
+                            const Gap(10),
                             Row(
                               children: [
                                 GestureDetector(
@@ -102,13 +109,22 @@ class ProfilePage extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.only(left: 50),
                             ),
-                            SvgPicture.asset(
-                              'assets/apple.svg',
-                              height: 70,
-                              width: 70,
-                            ),
                             Row(
                               children: [
+                                Container(
+                                  height: 60,
+                                  width: 60,
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.white),
+                                  child: Center(
+                                      child: Image.asset(
+                                    "assets/appleicon.png",
+                                    height: 20,
+                                    width: 20,
+                                  )),
+                                ),
+                                const Gap(10),
                                 GestureDetector(
                                   onTap: () {
                                     //  FirebaseService.signInwithGoogle(context);     // Handle Apple sign-in here
@@ -191,7 +207,7 @@ class ProfilePage extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Color.fromARGB(176, 170, 170, 100),
-                                fontSize: 14,
+                                fontSize: 17,
                                 fontFamily: 'Mulish',
                                 fontWeight: FontWeight.w600,
                                 height: 0,
@@ -209,7 +225,7 @@ class ProfilePage extends StatelessWidget {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
+                                  fontSize: 17,
                                   fontFamily: 'Mulish',
                                   fontWeight: FontWeight.w600,
                                   height: 0,
@@ -228,4 +244,3 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
-

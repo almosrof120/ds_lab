@@ -15,6 +15,7 @@ class LoginProfile extends StatelessWidget {
   final double buttonCircleRedious;
   final Icon buttonIcon;
   final VoidCallback onPressed;
+  
 
   const LoginProfile({
     Key? key,
