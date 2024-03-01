@@ -98,13 +98,14 @@ class _SigininPageState extends State<SigininPage> {
               width: deviceWidth,
               //height:double.infinity,
               color: const Color.fromARGB(255, 32, 72, 149),
-              child: Column(
+             child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 25),
                   ),
-                  Row(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    
                     children: [
                       const Padding(
                         padding: EdgeInsets.only(
@@ -127,6 +128,24 @@ class _SigininPageState extends State<SigininPage> {
                             fontWeight: FontWeight.w600,
                             height: 0.h,
                           )),
+                           Gap(4.h),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.only(left: 40, right: 40),
+                          ),
+                          Text("Login to Your Account to Continue your Courses",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: const Color.fromARGB(255, 255, 255, 255),
+                                fontSize: 11.h,
+                                fontFamily: 'Mulish',
+                                fontWeight: FontWeight.w100,
+                                height: 0.h,
+                              )),
+                        ],
+                      )
                       
                     ],
                   ),
@@ -207,7 +226,7 @@ class _SigininPageState extends State<SigininPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontFamily: 'Mulish',
-                                    color: Color(0xFF8c8e98),
+                                    color: Colors.white,
                                     fontSize: 14.0,
                                     height: 0,
                                     fontWeight: FontWeight.w500)),

@@ -1,7 +1,9 @@
-import 'package:ds_lab/Google%20Authrntication/Google_user.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
+import '../Google Authrntication/Google_user.dart';
 
 class FirebaseService {
   static final FirebaseAuth _auth = FirebaseAuth.instance;
