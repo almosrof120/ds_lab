@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
             Column(
               children: [
                 Container(
-                    height: 443.h,
+                    height: 449.h,
                     width: deviceWidth,
                     //height:double.infinity,
                     color: const Color.fromARGB(255, 32, 72, 149),
